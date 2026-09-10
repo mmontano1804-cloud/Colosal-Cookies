@@ -334,6 +334,26 @@
       .story { padding:26px; }
       .cta-box { padding:30px; }
     }
+  
+    /* FIX: menu artwork fills its container with no blank side space */
+    .menu-img {
+      width: 100%;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(95,22,15,.10);
+      background: transparent;
+      line-height: 0;
+    }
+
+    .menu-img img {
+      display: block;
+      width: 100%;
+      max-width: none;
+      height: auto;
+      margin: 0;
+    }
+
   </style>
 </head>
 <body>
