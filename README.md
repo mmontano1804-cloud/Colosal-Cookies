@@ -335,9 +335,18 @@
       .cta-box { padding:30px; }
     }
   
-    /* FIX: menu artwork fills its container with no blank side space */
+    /* MENU LAYOUT FIX */
+    .menu-grid {
+      grid-template-columns: minmax(280px, 420px) minmax(0, 440px);
+      justify-content: center;
+      align-items: start;
+      gap: 38px;
+    }
+
     .menu-img {
       width: 100%;
+      max-width: 440px;
+      justify-self: center;
       border-radius: 28px;
       overflow: hidden;
       box-shadow: var(--shadow);
@@ -349,12 +358,21 @@
     .menu-img img {
       display: block;
       width: 100%;
-      max-width: none;
       height: auto;
+      max-width: 100%;
       margin: 0;
     }
 
-  </style>
+    @media (max-width:900px) {
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+      .menu-img {
+        width: min(100%, 520px);
+      }
+    }
+
+</style>
 </head>
 <body>
 
